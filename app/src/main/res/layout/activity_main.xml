@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+
+    tools:context="com.example.helloworld.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_above"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_marginLeft="30dp"
+        android:weightSum="1">
+    <RadioButton
+        android:id="@+id/rb_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="四人打"/>
+
+    <RadioButton
+        android:id="@+id/rb_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="三人打"/>
+    </LinearLayout>
+
+    //第一行
+    <LinearLayout
+        android:id="@+id/ll_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ll_above"
+        android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/tv_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="大小："
+        android:layout_below="@id/rb_four"
+        android:layout_marginLeft="30dp"/>
+
+    <EditText
+        android:id="@+id/et_per"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="0.5"
+        android:layout_toRightOf="@id/tv_left"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="元/息"
+        android:layout_below="@+id/rb_four"
+        android:id="@+id/textView" />
+    </LinearLayout>
+
+    //第二行
+    <LinearLayout
+        android:id="@+id/ll_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ll_first"
+        android:orientation="horizontal"
+        android:layout_marginLeft="30dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="玩家"
+
+            android:layout_weight="0.2" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="甲"
+
+            android:layout_weight="0.2"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="乙"
+            android:layout_weight="0.2"
+             />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="丙"
+            android:layout_weight="0.2"
+            android:layout_below="@+id/rb_four"
+             />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="丁"
+            android:layout_weight="0.2"
+            android:layout_below="@+id/rb_four"
+             />
+    </LinearLayout>
+
+    //第三行
+    <LinearLayout
+        android:id="@+id/ll_thirst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_below="@+id/ll_second"
+        android:layout_alignLeft="@+id/ll_second"
+        android:layout_alignStart="@+id/ll_second">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="活鸟"
+            android:layout_weight="0.2"
+            android:id="@+id/tvlb" />
+
+        <EditText
+            android:id="@+id/et_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:layout_weight="0.2"/>
+
+        <EditText
+            android:id="@+id/et_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:layout_weight="0.2"/>
+
+        <EditText
+            android:id="@+id/et_13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:layout_weight="0.2"/>
+
+        <EditText
+            android:id="@+id/et_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:layout_weight="0.15"/>
+
+        </LinearLayout>
+
+    //第四行
+    <LinearLayout
+        android:id="@+id/ll_four"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_below="@+id/ll_thirst"
+        android:layout_alignLeft="@+id/ll_second"
+        android:layout_alignStart="@+id/ll_second">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="死鸟"
+            android:layout_weight="0.2"
+             />
+
+        <EditText
+            android:id="@+id/et_21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:layout_weight="0.2"/>
+
+        <EditText
+            android:id="@+id/et_22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:layout_weight="0.2"/>
+
+        <EditText
+            android:id="@+id/et_23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:layout_weight="0.2"/>
+
+        <EditText
+            android:id="@+id/et_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:layout_weight="0.15"/>
+
+    </LinearLayout>
+
+    //第五行
+    <LinearLayout
+        android:id="@+id/ll_five"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_below="@+id/ll_four"
+        android:layout_alignLeft="@+id/ll_second"
+        android:layout_alignStart="@+id/ll_second">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="胡息"
+            android:layout_weight="0.2"
+             />
+
+        <EditText
+            android:id="@+id/et_31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:layout_weight="0.2"/>
+
+        <EditText
+            android:id="@+id/et_32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:layout_weight="0.2"/>
+
+        <EditText
+            android:id="@+id/et_33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:layout_weight="0.2"/>
+
+        <EditText
+            android:id="@+id/et_34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:layout_weight="0.15"/>
+
+    </LinearLayout>
+
+    //第五行
+    <LinearLayout
+        android:id="@+id/ll_six"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_below="@+id/ll_five"
+        android:layout_alignLeft="@+id/ll_second"
+        android:layout_alignStart="@+id/ll_second">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="结果"
+            android:layout_weight="0.2"
+             />
+
+        <EditText
+            android:id="@+id/et_41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:layout_weight="0.2"/>
+
+        <EditText
+            android:id="@+id/et_42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:layout_weight="0.2"/>
+
+        <EditText
+            android:id="@+id/et_43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:layout_weight="0.2"/>
+
+        <EditText
+            android:id="@+id/et_44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:layout_weight="0.15"/>
+
+    </LinearLayout>
+
+    //第五行
+
+    <LinearLayout
+        android:id="@+id/ll_seven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/ll_six"
+        >
+
+        <Button
+            android:id="@+id/b_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="计算"
+            android:layout_weight="0"
+            />
+        <Button
+            android:id="@+id/b_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="清除"
+            />
+        <Button
+            android:id="@+id/b_exits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退出"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
